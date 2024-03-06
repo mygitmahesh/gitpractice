@@ -1,0 +1,10 @@
+val words=sc.textFile("D:/data/words.txt")
+words.collect
+val split=words.map(x => x.split("\\s++")
+split.collect
+val flatMap=split.flatMap(x => x)
+flatMap.collect
+val pair=flatMap.map(x => (x,1))
+pair.collect
+val reduceByKey=pair.reduceByKey((a,b) => (a+b))
+reduceByKey.collect
