@@ -1,0 +1,8 @@
+def wordCount(x:String):String={  
+val words=sc.textFile("D:/data/words.txt")
+val split=words.map(x => x.split("\\s++")
+val flatMap=split.flatMap(x => x)
+val pair=flatMap.map(x => (x,1))
+val reduceByKey=pair.reduceByKey((a,b) => (a+b))
+    reduceByKey
+}
