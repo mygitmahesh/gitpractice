@@ -1,2 +1,2 @@
----> Write word count program in hive
+---> Write word count program in hive :select 
 ---> write a word count in scala
