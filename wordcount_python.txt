@@ -1,0 +1,21 @@
+def word_frequency(input_string):
+    words = input_string.split()
+    frequency_dict = {}
+
+    for word in words:
+        # Remove punctuation and convert to lowercase for better matching
+        cleaned_word = word.strip(".,?!").lower()
+
+        # Update the word count in the dictionary
+        frequency_dict[cleaned_word] = frequency_dict.get(cleaned_word, 0) + 1
+
+    return frequency_dict
+
+# Example usage:
+sample_text = "This is a sample sentence. This sentence has some words. Sample words can repeat."
+
+result = word_frequency(sample_text)
+
+# Display word frequencies
+for word, count in result.items():
+    print(f"{word}: {count} times")
